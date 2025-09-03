@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "4597602-7aa8f07b-b35c-4109-84f3-dde81f31998e",
 		"name": "JMHZ",
+		"description": "Automated testing of JMHZ APIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
