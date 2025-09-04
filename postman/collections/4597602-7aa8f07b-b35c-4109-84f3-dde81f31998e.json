@@ -368,7 +368,7 @@
 							"        console.log(\"NEXT REQUEST COLL >>> \" + arr[index]); // \"foo\"\r",
 							"        pm.execution.setNextRequest(arr[index]);\r",
 							"    } else {\r",
-							"         pm.collectionVariables.set(\"index\", 0);\r",
+							"        pm.collectionVariables.set(\"index\", 0);\r",
 							"        console.log(\"<<< FINITO >>>>\"); // \"foo\"\r",
 							"        pm.execution.setNextRequest(null);\r",
 							"    }\r",
