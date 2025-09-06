@@ -285,6 +285,7 @@
 							"\r",
 							"console.log(\"CORRID >>> \" + mClass+\"-\"+corrID);\r",
 							"\r",
+							"pm.collectionVariables.set(\"currRetry\", 0);\r",
 							"pm.execution.setNextRequest(\"Poll\");"
 						],
 						"type": "text/javascript",
