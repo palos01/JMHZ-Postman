@@ -333,7 +333,7 @@
 					"script": {
 						"id": "318fd9f4-8827-440a-94df-8d7c1da125c3",
 						"exec": [
-							"setTimeout(function(){}, 5000);"
+							"setTimeout(function(){}, 10000);"
 						],
 						"type": "text/javascript",
 						"packages": {}
