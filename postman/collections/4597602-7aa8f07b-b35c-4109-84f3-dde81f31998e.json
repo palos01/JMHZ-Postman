@@ -188,82 +188,82 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "ONZ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b8fbd307-ae94-491e-a1c4-b18a9c7956aa",
+								"exec": [
+									"pm.collectionVariables.set(\"govTalkMessage\", pm.response.text());\r",
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 2000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response content type is application/xml; charset=utf-8\", function () {\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/xml; charset=utf-8');\r",
+									"});\r",
+									"\r",
+									"pm.execution.setNextRequest(\"APEP\");\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e316cd9c-e1c1-45e5-9ebe-da706d0813d5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4597602-aabc183e-1b8d-4d8b-8d94-6ebb346594cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!-- \r\n<toGovTalk><vs>3345146686</vs></toGovTalk> \r\n-->\r\n<!--{{guid}}-->\r\n<ONZ version=\"2009.1\" xmlns=\"http://schemas.cssz.cz/ONZ2009\">\r\n  <employee sqnr=\"1\" dep=\"111\" act=\"1\" fro=\"\" dat=\"2010-09-01\" ver=\"1\">\r\n    <client bno=\"5409050053\">\r\n      <name sur=\"Fry\" ona=\"J.\" fir=\"Philip\" tit=\"M.D.\" />\r\n      <birth dat=\"1954-01-01\" nam=\"Fry\" cit=\"Mesto\"/>\r\n      <stat mal=\"1\" cnt=\"CZ\" />\r\n      <adr str=\"Ulice\" num=\"1\" pnu=\"11150\" cit=\"Mesto\" cnt=\"CZ\" pos=\"Posta 1\" />\r\n      <fdr str=\"\" num=\"\" pnu=\"\" cit=\"\" pos=\"\" />\r\n      <cdr str=\"Ulice\" num=\"1\" pnu=\"11150\" cit=\"Mesto Praha\" cnt=\"CZ\" pos=\"Posta 1\" />\r\n    </client>\r\n    <comp vs=\"3345146686\" nvs=\"\" id=\"3345146686\" nam=\"Podavajici Organizace 3345146686\" />\r\n    <job fro=\"2010-01-01\" to=\"\" rel=\"1\" per=\"CZ\" sme=\"N\" />\r\n    <forin nam=\"\" str=\"\" num=\"\" pnu=\"\" cit=\"\" cnt=\"\" id=\"\" cur=\"\" />\r\n    <pens typ=\"\" tak=\"\" />\r\n    <insh cnr=\"111\" />\r\n    <inso nam=\"\" />\r\n    <insp nam=\"\" />\r\n  </employee>\r\n</ONZ>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/toGovTalk",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"toGovTalk"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "4597602-ff9fe079-530d-4292-935e-2a2e14a12f31"
-		},
-		{
-			"name": "ONZ",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "b8fbd307-ae94-491e-a1c4-b18a9c7956aa",
-						"exec": [
-							"pm.collectionVariables.set(\"govTalkMessage\", pm.response.text());\r",
-							"\r",
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.expect(pm.response.code).to.equal(200);\r",
-							"});\r",
-							"\r",
-							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
-							"});\r",
-							"\r",
-							"\r",
-							"pm.test(\"Response content type is application/xml; charset=utf-8\", function () {\r",
-							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/xml; charset=utf-8');\r",
-							"});\r",
-							"\r",
-							"pm.execution.setNextRequest(\"APEP\");\r",
-							"\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "e316cd9c-e1c1-45e5-9ebe-da706d0813d5",
-						"exec": [
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "4597602-aabc183e-1b8d-4d8b-8d94-6ebb346594cc",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!-- \r\n<toGovTalk><vs>3345146686</vs></toGovTalk> \r\n-->\r\n<!--{{guid}}-->\r\n<ONZ version=\"2009.1\" xmlns=\"http://schemas.cssz.cz/ONZ2009\">\r\n  <employee sqnr=\"1\" dep=\"111\" act=\"1\" fro=\"\" dat=\"2010-09-01\" ver=\"1\">\r\n    <client bno=\"5409050053\">\r\n      <name sur=\"Fry\" ona=\"J.\" fir=\"Philip\" tit=\"M.D.\" />\r\n      <birth dat=\"1954-01-01\" nam=\"Fry\" cit=\"Mesto\"/>\r\n      <stat mal=\"1\" cnt=\"CZ\" />\r\n      <adr str=\"Ulice\" num=\"1\" pnu=\"11150\" cit=\"Mesto\" cnt=\"CZ\" pos=\"Posta 1\" />\r\n      <fdr str=\"\" num=\"\" pnu=\"\" cit=\"\" pos=\"\" />\r\n      <cdr str=\"Ulice\" num=\"1\" pnu=\"11150\" cit=\"Mesto Praha\" cnt=\"CZ\" pos=\"Posta 1\" />\r\n    </client>\r\n    <comp vs=\"3345146686\" nvs=\"\" id=\"3345146686\" nam=\"Podavajici Organizace 3345146686\" />\r\n    <job fro=\"2010-01-01\" to=\"\" rel=\"1\" per=\"CZ\" sme=\"N\" />\r\n    <forin nam=\"\" str=\"\" num=\"\" pnu=\"\" cit=\"\" cnt=\"\" id=\"\" cur=\"\" />\r\n    <pens typ=\"\" tak=\"\" />\r\n    <insh cnr=\"111\" />\r\n    <inso nam=\"\" />\r\n    <insp nam=\"\" />\r\n  </employee>\r\n</ONZ>",
-					"options": {
-						"raw": {
-							"language": "xml"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{host}}/toGovTalk",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"toGovTalk"
-					]
-				}
-			},
-			"response": []
 		},
 		{
 			"name": "APEP",
@@ -417,7 +417,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "416b71fe-00d9-423d-8975-bff5af4f38f8",
+				"id": "dad51dc8-3ea1-4d66-9c61-4a8d0a063238",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -439,7 +439,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "548c3c9d-2a7e-488c-b06b-a4af03c3626d",
+				"id": "047300fc-ec66-4e01-a7e7-05059e80f7d8",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -463,7 +463,7 @@
 		},
 		{
 			"key": "reqColl",
-			"value": "[\"ONZ\", \"TS13001 v1\", \"TS13001 v2\", \"ELDP\"]"
+			"value": "[\"TS13001 v1\", \"TS13001 v2\", \"ELDP\"]"
 		},
 		{
 			"key": "index",
