@@ -372,6 +372,8 @@
 							"        });\r",
 							"    }\r",
 							"\r",
+							"    console.log(\"SETTING NEXT STEP (\"+index+\") FROM >>> \" + arr); // \"foo\"\r",
+							"\r",
 							"    pm.collectionVariables.set(\"currRetry\", 0);\r",
 							"\r",
 							"    index++;\r",
