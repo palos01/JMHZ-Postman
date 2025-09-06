@@ -53,6 +53,10 @@
 								"exec": [
 									"pm.collectionVariables.set(\"govTalkMessage\", pm.response.text());\r",
 									"\r",
+									"pm.test(\"Response time is less than 20\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(20);\r",
+									"});\r",
+									"\r",
 									"pm.execution.setNextRequest(\"APEP\");"
 								],
 								"type": "text/javascript",
