@@ -435,7 +435,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "82b93b1c-d40d-40f2-9594-c3d6a8cca19c",
+				"id": "cf93dd46-d98c-469c-9160-e8a7c4fe2ebb",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -457,7 +457,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "1b82f35a-2985-4d9f-a51e-c280177a1036",
+				"id": "c0243533-b413-4405-9e11-640b7241566d",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -481,7 +481,7 @@
 		},
 		{
 			"key": "reqColl",
-			"value": "[\"TS13001 v1\", \"TS13001 v2\", \"ELDP\"]"
+			"value": "[\"TS13001 v1\", \"TS13001 v2\", \"ELDP\", \"ONZ\"]"
 		},
 		{
 			"key": "index",
@@ -497,8 +497,7 @@
 		},
 		{
 			"key": "currRetry",
-			"value": "0",
-			"type": "string"
+			"value": "0"
 		}
 	]
 }
