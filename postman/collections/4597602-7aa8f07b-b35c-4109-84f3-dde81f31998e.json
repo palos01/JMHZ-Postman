@@ -17,6 +17,8 @@
 							"script": {
 								"id": "cb814172-4bbe-4716-b59b-e78b866835dd",
 								"exec": [
+									"console.log(\"<<< START TEST RUN OF \"+ pm.collectionVariables.get(\"reqColl\")+ \" at \"+ (new Date()) +\" >>>\"); // \"foo\"\r",
+									"\r",
 									"pm.collectionVariables.set(\"index\", 0);"
 								],
 								"type": "text/javascript",
