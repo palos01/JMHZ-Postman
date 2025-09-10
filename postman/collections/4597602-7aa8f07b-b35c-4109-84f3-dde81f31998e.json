@@ -440,7 +440,16 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{host}}/gc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"gc"
+					]
+				}
 			},
 			"response": []
 		}
